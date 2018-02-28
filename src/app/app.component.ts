@@ -5,20 +5,29 @@ import { Product } from './product.model';
   selector: 'app-root',
   template: `
   <div class="inventory-app">
-    
+    <h1>{{ product.name }}</h1>
+    <span>{{ product.sku }}</span>
   </div>
   `,
   //templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  product : Product;
+  products : Product[];
 
   constructor() {
-    this.product = new Product(
-      'NICEHAT',
+    this.products = Array<Product>(
+      new Product('MYSHOES',
+      'Black Running Shoes',
+      '/resources/images/products/black-shoes.jpg',
+      ['Men', 'Shoes', 'Running Shoes'], 109.99),
+      new Product('NEATOJACKET',
+      'Blue Jacket',
+      '/resources/images/products/black-jacket.jpg',
+      ['Women', 'Apparel', 'Jackets & Vests'], 238.99),
+      new Product('NICEHAT',
       'A Nice Black Hat',
       '/resources/images/products/black-hat.jpg',
-      ['Men', 'Accesories', 'Hats'], 29.99);
+      ['Men', 'Accesories', 'Hats'], 29.99));
   }
 }
