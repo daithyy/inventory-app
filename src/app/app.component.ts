@@ -1,15 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter } from '@angular/core';
 import { Product } from './product.model';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <div class="inventory-app">
-    <h1>{{ product.name }}</h1>
-    <span>{{ product.sku }}</span>
-  </div>
-  `,
-  //templateUrl: './app.component.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
