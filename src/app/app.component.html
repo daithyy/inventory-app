@@ -1,13 +1,13 @@
-<div class="inventory-app">
+<!-- <div class="inventory-app">
    <h1>{{ product.name }}</h1>
    <span>{{ product.sku }}</span>
-</div>
+</div> -->
 
 <div class="inventory-app">
-  <product-list
+  <app-product-list
     [productList]="products"
     (onProductSelected)="productWasSelected($event)">
-  </product-list>
+  </app-product-list>
 </div>
 
 <!-- [squareBrackets] for inputs  -->
